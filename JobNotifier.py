@@ -14,9 +14,9 @@ nop_list = []
 
 #function to return current number of open positions
 def get_positions(url):
-    chromedriver = "C:/Users/Anubhav Sharma/Desktop/chromedriver"
-    username = ''
-    password = ''
+    chromedriver = os.path(chromedriver)
+    username = os.environ['username']
+    password = os.environ['password']
     driver = webdriver.Chrome(chromedriver)
     driver.get(url)
     driver.find_element_by_id('j_username').send_keys(username)
